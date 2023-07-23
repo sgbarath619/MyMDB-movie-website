@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMDB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-heading">
+            <h1>MyMDB</h1>
+        </div>
+        <div class="navbar-form">
+            <label for="titleInput">Movie Title : </label>
+            <input type="text" id="titleInput" placeholder="Enter movie title" style="width: 25rem;" value="Harry Potter">
+            <label for="yearInput">Release Year : </label>
+            <input type="text" id="yearInput" placeholder="Enter year" pattern="\d{4}" maxlength="4" oninput="validateYearInput(event)" 
+            style="width: 6rem;">
+            <button onclick="searchMovies()">Search</button>
+        </div>
+    </nav>
+    <div id="bodyDiv">
+        <div id="moviesListContainer">
+            
+        </div>
+    </div>
+
+    <div class="infoCard-container" id="infoCardContainer">
+    </div>
+
+
+    <footer class="footer">
+        <div class="pagination">
+            <button id="prevButton" onclick="goToPreviousPage()">&#60; Previous</button>
+            <span id="currentPage"> 1 / 1 </span>
+            <button id="nextButton" onclick="goToNextPage()">Next &#62;</button>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
